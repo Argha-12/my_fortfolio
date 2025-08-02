@@ -4,11 +4,6 @@
 * Version       : 1.0
 ==================================== */
 
-/*==================================
-font-family: 'Poppins', sans-serif;
-==================================== */
-
-
 /*=========== TABLE OF CONTENTS ===========
 1.  General css (Reset code)
 2.  Header
@@ -21,79 +16,91 @@ font-family: 'Poppins', sans-serif;
 9.  Portfolio
 10. Clients
 11. Contact
+===========================================*/
 
 /*-------------------------------------
-		1.General css (Reset code)
+1. General css (Reset code)
 --------------------------------------*/
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-*{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	box-sizing:border-box;
-}
-body{
-	font-family: 'Poppins', sans-serif;
-	font-size:16px;
-	color: #676a81;
-	background: #fff;
-    max-width:1920px;
-    margin:0 auto;
-	overflow-x:hidden;
-}
-
-a,a:hover,a:active,a:focus {
-	display:inline-block;
-	text-decoration:none;
-	color: #6a708e;
-	font-size:16px;
-	padding:0;
-}
-h1,h2,h3,h4,h5,h6 { 
-	margin: 0;
-	color:#43485c;
+body {
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-	font-family: 'Poppins', sans-serif;
-	text-transform: capitalize;
+    color: #4A4E69;
+    background: #fff;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
+
+a, a:hover, a:active, a:focus {
+    display: inline-block;
+    text-decoration: none;
+    color: #5F6CAF;
+    font-size: 16px;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: #22223B;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+
 p {
-	margin: 0;
-	line-height:1.8;
-	color:#43485c;
-	font-size:14px;
-	font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.8;
+    color: #4A4E69;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
 }
-img{border:none;max-width:100%; height:auto;}
-ul{
-	padding: 0;
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    padding: 0;
     margin: 0 auto;
     list-style: none;
 }
+
 ul li {
-	list-style: none;
-	
+    list-style: none;
 }
-select,input,textarea,button{box-shadow:none;outline:0!important;}
-button {background: transparent;border: 0;}
 
-html,body{
+select, input, textarea, button {
+    box-shadow: none;
+    outline: 0 !important;
+}
+
+button {
+    background: transparent;
+    border: 0;
+}
+
+html, body {
     height: 100%;
-	position: relative;
-}
-[placeholder]:focus::-webkit-input-placeholder {
-  -webkit-transition: opacity 0.3s 0.3s ease; 
-  -moz-transition: opacity 0.3s 0.3s ease; 
-  -ms-transition: opacity 0.3s 0.3s ease; 
-  -o-transition: opacity 0.3s 0.3s ease; 
-  transition: opacity 0.3s 0.3s ease; 
-  opacity: 0;
+    position: relative;
 }
 
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.fix {
+    position: relative;
+    clear: both;
+}
 .fix{position: relative;clear: both;}
 /*=============Style css=========*/
 
@@ -106,7 +113,7 @@ html,body{
 }
 @media (min-width: 1024px){}
 nav.navbar.bootsnav.no-background {
-    background-color: #fff;
+    background-color: #3615ad;
     border: none;
 }
 
@@ -249,13 +256,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 /*.single-about-txt*/
 .single-about-txt h3 {
     font-size: 28px;
-    color: #3c4258;
+    color: #142f94;
     text-transform: initial;
     line-height: 1.8;
 }
 .single-about-txt p {
     font-size: 16px;
-    color: #999fb3;
+    color: #b56db6;
     padding: 35px 0 43px;
     /* border-bottom: 1px solid #999fb3; */
 }
@@ -303,11 +310,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
 .about-list-icon  ul li a {
     padding-right: 22px;
     cursor:pointer;
-    color: #fff;
+    color: #e8d4d4;
 }
 .about-list-icon ul li a {
     cursor: pointer;
-    color: #fff;
+    color: #1d9db4;
     display: inline-block;
     border: 2px solid;
     margin-left: 20px;
@@ -694,26 +701,33 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 /*-------------------------------------
         11. Contact
 --------------------------------------*/
-.contact {
-    background: #f9fbfd;
-    padding: 50px 0 100px;
+/* === Custom Contact Section Styles === */
+.contact-add-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
-.single-contact-box {padding-top: 100px;}
-.contact-form  .form-group {
-    margin-bottom: 20px;
-    
+
+.single-contact-add-info {
+    width: 200px;
+    padding: 10px;
+    font-family: 'Cambria', serif;
+    color: #555;
 }
-.contact-form .form-control {
-    padding: 25px;
-    font-size: 14px;
-    border: 1px solid #fff;
-    border-radius: 0px;
-    box-shadow: none;
-    outline: 0!important;
-    background: #fff;
-    color: #636a82;
-    resize: none;
+
+.single-contact-add-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
 }
+
+.single-contact-add-info p {
+    font-size: 16px;
+    margin: 0;
+    word-wrap: break-word;
+}
+
 
 /*--contct button--*/
 .contact-form .single-contact-btn {
